@@ -1,7 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function ContactListItem({ contact }) {
+function ContactListItem({ contact, url, setData }) {
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      
+      const response = await fetch(`${url}axel-ahlander/contact`,
+          { method:'DELETE',
+            headers: {'Content-Type': 'application/json',
+            },
+    })
+    if (response.ok) {
+      setData((prevData) => prevData.filter(item => item.id !== contact.id));
+    }
+  };
+
+    
     return (
         <li className="contact-item">
             <div className="contact-card">
@@ -9,6 +23,7 @@ function ContactListItem({ contact }) {
                 <Link to={`/contact/${contact.id}`} className="view-link">
                     <p>View Details</p>
                 </Link>
+                <button onClick={handleSubmit}>Delete contact</button>
             </div>
             <hr />
         </li>

@@ -4,7 +4,7 @@ import { ContactsContext } from '../../App';
 import { Link } from 'react-router-dom';
 
 function ContactList() {
-    const { data } = useContext(ContactsContext);
+    const { data, setData, url } = useContext(ContactsContext);
     
     return (
         <div className='contact-list'>
@@ -15,7 +15,7 @@ function ContactList() {
 
             <ul>
                 {data.map((content, index) => (
-                    <ContactListItem key={index} contact={content} />
+                    <ContactListItem key={index} contact={content} url = {url} setData={setData}  />
                 ))}
             </ul>
         </div>

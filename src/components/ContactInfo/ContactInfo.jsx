@@ -18,8 +18,8 @@ function ContactInfo() {
 
     return (
         <div className="contact-info">
-            <Link to="/" className="return-link">
-                <p id="return">Return to menu</p>
+            <Link to="/contacts" className="return-link">
+                <p id="return">Return to contact list</p>
             </Link>
             <div className="contact-details">
                 <h1>{`${currentUser.firstName} ${currentUser.lastName}`}</h1>
