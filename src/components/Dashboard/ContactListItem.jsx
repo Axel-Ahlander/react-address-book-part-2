@@ -23,7 +23,7 @@ function ContactListItem({ contact, url, setData }) {
                 <Link to={`/contact/${contact.id}`} className="view-link">
                     <p>View Details</p>
                 </Link>
-                <button onClick={handleSubmit}>Delete contact</button>
+                <button className='delete-button' onClick={handleSubmit}>Delete contact</button>
             </div>
             <hr />
         </li>

@@ -1,9 +1,8 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import './App.css';
-import { Router, Route, Routes } from 'react-router-dom';
+import {  Route, Routes } from 'react-router-dom';
 import ContactList from './components/Dashboard/ContactList';
 import ContactInfo from './components/ContactInfo/ContactInfo';
-import { json } from 'react-router-dom';
 import Dashboard from './components/Dashboard';
 import CreateContact from './components/ContactInfo/CreateContact';
 export const ContactsContext = createContext();
@@ -23,16 +22,8 @@ function App() {
         fetchData();
     }, [url]);
 
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setData(prevData => prevData.map(contact => 
-          contact.name === name ? { ...contact, value } : contact
-        ));
-      };
-
     return (
-        <ContactsContext.Provider value = {{data, setData, handleChange, url}}>
+        <ContactsContext.Provider value = {{data, setData, url}}>
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/contacts" element = {<ContactList/>} />

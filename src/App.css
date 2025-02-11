@@ -218,3 +218,12 @@ button:hover {
     font-weight: bold;
     color: #333;
 }
+
+
+.delete-button {
+    background-color: rgb(201, 76, 76);
+}
+
+.delete-button:hover {
+    background-color: rgb(138, 36, 36);
+}

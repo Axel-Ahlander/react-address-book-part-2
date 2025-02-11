@@ -3,7 +3,7 @@ import { ContactsContext } from '../../App'
 import { useNavigate } from 'react-router-dom';
 
 function CreateContact() {
-    const {handleChange, url, setData} = useContext(ContactsContext)
+    const { url, setData} = useContext(ContactsContext)
     const [newContact, setNewContact] = useState({
         firstName: '',
         lastName: '',
