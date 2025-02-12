@@ -37,37 +37,77 @@
 }
 
 
-.form-info {
+.form-container {
+    background-color: #f4f4f9;
+    padding: 40px;
+    border-radius: 10px;
+    width: 350px;
+    margin: 50px auto;
     text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    
+}
+
+.form-container h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+.return-link {
+    text-decoration: none;
+}
+
+#return {
+    font-size: 18px;
+    color: #007BFF;
+    cursor: pointer;
+    margin-bottom: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#return:hover {
+    color: #0056b3;
+}
+
+
+
+.form-info {
     display: block;
-    width: 300px;
-    margin: 0 auto;
+    width: 100%;
     margin-top: 20px;
-    background-color: #f9f9f9;
+    background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.form-info h1 {
-    font-size: 28px;
+.form-info label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
     color: #333;
-    margin-bottom: 20px;
 }
 
-.form-info label,
 .form-info input {
     display: block;
-    margin-bottom: 10px;
-    width: 100%;
-    padding: 10px;
+    width: 90%;
+    padding: 12px;
+    margin-bottom: 15px;
     border-radius: 5px;
     border: 1px solid #ddd;
+    font-size: 14px;
 }
 
 button {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     background-color: #007BFF;
     color: white;
     border: none;
@@ -226,4 +266,68 @@ button:hover {
 
 .delete-button:hover {
     background-color: rgb(138, 36, 36);
+}
+
+.update-button {
+    background-color: rgb(61, 87, 145);
+}
+
+.update-button:hover {
+    background-color: rgb(30, 32, 128);
+}
+
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+
+.input-button-wrapper {
+    display: flex;
+    gap: 10px; 
+}
+
+.input-button-wrapper input {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 300px; 
+    height: 30px; 
+    margin: 0; 
+}
+
+
+.input-button-wrapper button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 100px; 
+    height: 30px; 
+    margin: 0; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-button-wrapper button:hover {
+    background-color: #0056b3;
+}
+
+.input-button-wrapper button:active {
+    background-color: #004085;
 }
