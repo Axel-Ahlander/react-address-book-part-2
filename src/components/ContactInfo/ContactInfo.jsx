@@ -12,7 +12,7 @@ function ContactInfo() {
 
   const handleSubmitDelete = async (e) => {
     e.preventDefault();
-    const response = await fetch(`${url}axel-ahlander/contact`, {
+    const response = await fetch(`${url}axel-ahlander/contact/${id}`, {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
     });
